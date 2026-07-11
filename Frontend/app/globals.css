@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #090d18;
+  --panel: #10182b;
+  --panel-2: #161f38;
+  --border-soft: #1a2338;
+  --text-1: #eaeef9;
+  --text-2: #8d97b3;
+  --amber: #f5a623;
+  --cyan: #3ed6c4;
+  --crimson: #ff5470;
+  --violet: #7c8cf8;
+  --sage: #8fd19e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--ink);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  color: var(--text-1);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(234, 238, 249, 0.08) 1px, transparent 0) 0 0 / 28px 28px,
+    var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.35);
+}
+
+@keyframes pulse-marker {
+  0% {
+    opacity: 0.65;
+    transform: scale(0.9);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
